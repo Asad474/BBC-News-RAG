@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.env
+.env.*
+!.env.example
+virtual/
+.venv/
+env/
+venv/
+
+# Git and tooling caches
+.git/
+.gitignore
+.ruff_cache/
+.vscode/
+.idea/
+.prettierrc
+.prettierignore
+
+# Build and egg distribution artifacts
+build/
+dist/
+*.egg-info/
+fetch_news.egg-info/
+
+# Logs and system files
+*.log
+.DS_Store

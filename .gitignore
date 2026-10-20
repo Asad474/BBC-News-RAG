@@ -1,0 +1,33 @@
+# Virtual Environment
+virtual/
+virtualenv/
+.venv/
+venv/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+build/
+dist/
+
+# Linting & Formatting caches
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Vector Database
+chroma_db/
+
+# OS Generated
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+name: bbc-news-rag
+
+services:
+  ingest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: bbc-news-rag:v1
+    env_file:
+      - .env
+    volumes:
+      - chroma_data:/app/chroma_db
+    command: [ "bbc-ingest" ]
+    restart: "no"
+
+  app:
+    image: bbc-news-rag:v1
+    env_file:
+      - .env
+    volumes:
+      - chroma_data:/app/chroma_db
+    command: [ "bbc-rag" ]
+    depends_on:
+      ingest:
+        condition: service_completed_successfully
+    restart: "no"
+
+volumes:
+  chroma_data:

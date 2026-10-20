@@ -1,0 +1,5 @@
+virtual/
+virtualenv/
+.venv/
+bbc_news.csv
+.ruff_cache/
